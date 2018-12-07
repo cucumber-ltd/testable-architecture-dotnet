@@ -50,12 +50,12 @@ public class EndToEndTests
         string args;
         if (System.Environment.OSVersion.Platform.ToString().Equals("Unix")) {
             fileName = "mono";
-            args = exe + " " + csv;
+            args = "\"" + exe + "\" \"" + csv + "\"";
         } 
         else 
         {
             fileName = exe;
-            args = csv;
+            args = "\"" + csv + "\"";
         }
 
         Process proc = new Process();

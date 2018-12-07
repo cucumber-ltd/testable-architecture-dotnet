@@ -65,6 +65,7 @@ public class EndToEndTests
         proc.StartInfo.EnvironmentVariables.Add("FAKE_INITIALISATION_DATA",
             "1,234.50 ; 19,123456.78 ; 22,123456.78 ; 57, 123456.78");
         proc.StartInfo.UseShellExecute = false;
+
         proc.Start();
         proc.WaitForExit();
     }

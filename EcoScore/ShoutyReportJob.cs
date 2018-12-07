@@ -1,12 +1,14 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Xml;
+using System;
 
 class ShoutyReportJob
 {
     public static void Main(string[] args)
     {
         var path = args[0];
+        Console.WriteLine("Processing " + path);
         var mileageClaims = ReadMileageClaims(path);
         var statsService = CreateStatsService();
 
